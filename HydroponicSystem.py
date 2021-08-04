@@ -94,7 +94,58 @@ def manageWater():
         digitalWrite(lowWaterPin, LOW)  
     #Serial.println(waterLevel)
 
+# Water Pump Schedule 1: 2 cycles
+# turn the Water Pump on
+def turnOnWP2():
+    digitalWrite(waterPumpPin, HIGH)              
+    TurnOffWP2.setNext(1000)
+    print("WP 2 cycle on\n")         
 
+# turn the Water Pump off
+def turnOffWP2():
+    digitalWrite(waterPumpPin, LOW)         
+    TurnOnWP2.setNext(1000)
+    print("im here NOW")
+    print("WP 2 cycle off\n")          
+
+# Water Pump Schedule 1: 3 cycles
+# turn the Water Pump on
+def turnOnWP3():
+    digitalWrite(waterPumpPin, HIGH)            
+    TurnOffWP3.setNext(2000)
+    print("WP 3 cycle on\n")              
+
+# turn the Water Pump off
+def turnOffWP3():
+    digitalWrite(waterPumpPin, LOW)        
+    TurnOnWP3.setNext(2000)
+    print("WP 2 cycle off\n")              
+
+# Water Pump Schedule 1: 4 cycles
+# // turn the Water Pump on
+def turnOnWP4():
+    digitalWrite(waterPumpPin, HIGH)      
+    TurnOffWP4.setNext(3000)
+    print("WP 4 cycle on\n")    
+
+# turn the Water Pump off
+def turnOffWP4():
+    digitalWrite(waterPumpPin, LOW)
+    TurnOnWP4.setNext(3000)
+    print("WP 4 cycle off\n")   
+
+# Water Pump Schedule 1: 8 cycles
+# turn the Water Pump on
+def turnOnWP8():
+    digitalWrite(waterPumpPin, HIGH) 
+    TurnOffWP8.setNext(4000)
+    print("WP 8 cycle on\n")
+
+# turn the Water Pump off
+def turnOffWP8():
+    digitalWrite(waterPumpPin, LOW)
+    TurnOnWP8.setNext(4000)
+    print("WP 8 cycle off\n")
 
 
 # Original Codebase below #
